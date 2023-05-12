@@ -1,7 +1,18 @@
 const distanceOfTicket = parseInt (prompt('scrivi la distanza del tuo viaggio in km'));
-const userAge = prompt('scrivi la tua eta');
-const priceOfTicket = 0.21
+const userAge = parseInt (prompt('scrivi la tua eta'));
+const priceOfKm = 0.21;
+const priceOfTicket = priceOfKm * distanceOfTicket;
+const price20Discount = (20 / 100) * priceOfTicket;
+const price20Scouted = priceOfTicket - price20Discount;
+const price40Discount = (40 / 100) * priceOfTicket;
+const price40Scouted = priceOfTicket - price40Discount;
 
-console.log(distanceOfTicket * priceOfTicket) ;
 
-document.getElementById('price').innerHTML = (distanceOfTicket * priceOfTicket) ;
+
+if (userAge < 18) {
+    document.getElementById('price').innerHTML = (price20Scouted) ;
+    
+} else if (userAge > 40) {
+    document.getElementById('price').innerHTML = (price40Scouted) ;
+
+} else document.getElementById('price').innerHTML = (priceOfTicket) ;

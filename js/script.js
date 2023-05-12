@@ -1,0 +1,1 @@
+const distanceOfTicket = prompt('scrivi la distanza del tuo viaggio');

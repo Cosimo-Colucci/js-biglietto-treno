@@ -10,9 +10,9 @@ const price40Scouted = priceOfTicket - price40Discount;
 
 
 if (userAge < 18) {
-    document.getElementById('price').innerHTML = (price20Scouted.toFixed(2)) ;
+    document.getElementById('price').innerHTML += (price20Scouted.toFixed(2)) ;
 
 } else if (userAge > 40) {
-    document.getElementById('price').innerHTML = (price40Scouted.toFixed(2)) ;
+    document.getElementById('price').innerHTML += (price40Scouted.toFixed(2)) ;
 
-} else document.getElementById('price').innerHTML = (priceOfTicket.toFixed(2)) ;
+} else document.getElementById('price').innerHTML += (priceOfTicket.toFixed(2)) ;
